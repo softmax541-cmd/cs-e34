@@ -283,3 +283,29 @@ git add .
 git commit -m "Updated project"
 git push origin main
 
+
+
+
+pipeline script-->
+pipeline {
+    agent any
+
+    stages {
+        stage('build') {
+            steps {
+                echo 'build successfull'
+            }
+        }
+        stage('test') {
+            steps {
+                echo 'test successfull'
+            }
+        }
+        stage('deploy') {
+            steps {
+                echo 'deploy successfull'
+            }
+        }
+    }
+}
+
